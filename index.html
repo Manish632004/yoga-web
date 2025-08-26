@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -29,6 +28,11 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">YooGA</div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="#">HOME</a></li>
         <li><a href="#">ABOUT</a></li>
@@ -505,7 +509,7 @@
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <div class="footer-bottom">
-        <p>© Your Site Name, All Right Reserved.</p>
+        <p> Your Site Name, All Right Reserved.</p>
       </div>
     </div>
   </footer>
@@ -518,11 +522,27 @@
 
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a nav link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    });
     AOS.init();
   </script>
   <script src="script.js"></script>
-
-
 
 </body>
 
