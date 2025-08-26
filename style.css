@@ -601,12 +601,14 @@ body {
   background-color: #F5F5DC;
   text-align: center;
   max-height: 260px;
+  position: relative;
+  
 }
 
 .testimonial-card {
   padding: 30px 20px;
   text-align: left;
-  position: relative;
+  /* position: relative; */
 }
 
 .testimonial-text {
