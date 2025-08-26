@@ -600,9 +600,9 @@ body {
   padding: 80px 10%;
   background-color: #F5F5DC;
   text-align: center;
-  max-height: 260px;
+  /* max-height: 260px; */
   position: relative;
-  
+
 }
 
 .testimonial-card {
